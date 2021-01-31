@@ -1,0 +1,199 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-family: droid-sans-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* added for hero page firefox issue (scroll in scroll) 
+Add a class to the main row in hero() to change later 
+if you want to get rid of this */
+.rct-grid-row {
+  overflow: hidden;
+}
+
+.yellow {
+  color: #DCF763;
+}
+
+.red {
+  color: #FF3864;
+}
+
+.darkGrey {
+  color: #393D3F;
+}
+
+.lightGrey {
+  color: #7E878B;
+}
+
+/* ------------------------ CONTAINERS ------------------------- */
+
+.pageContainer {
+  background-color: #131515;
+  min-height: 100vh;
+}
+
+.pageContainer.home {
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  height: 100vh;
+}
+
+section {
+  min-height: 700px;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+
+/* ------------------------ Menu ------------------------- */
+
+.menuContainer {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 60px;
+  height: 110px;
+  background-color: #393D3F;
+}
+
+.mobileMenuContainer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  height: 110px;
+  background-color: #393D3F;
+}
+
+
+
+
+/* ------------------------ Hero ------------------------- */
+
+.hero.mainContainer {
+  height: 100vh;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameContainer {
+  overflow: visible;
+  transform: translate(5%, -10%);
+}
+
+.heroPictureContainer {
+  overflow: visible;
+  width: 300px;
+  height: 450px;
+  transform: translate(-10%,-10%);
+}
+
+
+#heroPicture {
+  position: relative;
+  top: 0px;
+  left:0px;
+  width: 300px;
+  z-index: 99;
+}
+
+.heroPictureBg {
+  background-color: #DCF763;
+  width: 300px;
+  height: 450px;
+  transform: translate(10px, -445px);
+  transition: 0.2s ease-in-out;
+}
+
+.yellow.addison {
+  overflow: visible;
+  font-size: 115px;
+  padding-left: 5px;
+  margin-bottom: -35px;
+}
+
+.lightGrey.dit {
+  margin-top: 25px;
+  padding-left: 5px;
+  font-size: 32px;
+  transition: 0.2s ease-in-out;
+}
+
+
+.heroPictureContainer:hover .heroPictureBg{
+  transform: translate(5px, -450px);
+}
+
+.nameContainer:hover .lightGrey.dit {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .nameContainer {
+    transform: scale(.8);
+  }
+
+  .heroPictureContainer {
+    transform: scale(.8);
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .nameContainer {
+    transform: scale(.7);
+  }
+
+  .heroPictureContainer {
+    transform: scale(.7);
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .hero.mainContainer {
+    height: 100vh;
+  }
+
+  .nameContainer {
+    padding-left: 0px;
+    transform: scale(.75);
+  }
+
+  .heroPictureContainer {
+    transform: scale(.75);
+  }
+}
+
+/* ------------------------ About ------------------------- */
+
+.about.mainContainer {
+  height: 100vh;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.about.mainContainer.right {
+  background-color: #ffffff;
+}
